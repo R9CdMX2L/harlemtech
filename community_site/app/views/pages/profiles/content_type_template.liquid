@@ -1,0 +1,50 @@
+---
+title: Profile Detail
+listed: false
+published: true
+content_type: profiles
+---
+
+{% extends parent %}
+
+
+{% block 'header' %}
+<div class="topic">
+<div class="container">
+    <div class="col-md-8">
+        <h3>{{ profile.name }}</h3>
+        {% if profile.logo_image.url %}
+        <img src="{{ profile.logo_image.url | resize: '200x200#' }}" alt="{{ profile.name | escape }}">
+        {% endif %}
+        <h4>Tags</h4>
+        <div class="blank"></div>
+        <span class="badge badge-default">{{ profile.tag1 }}</span>&nbsp;
+        <div class="blank"></div>
+        <span class="badge badge-default">{{ profile.tag2 }}</span>&nbsp;
+        <div class="blank"></div>
+        <span class="badge badge-default">{{ profile.tag3 }}</span>&nbsp;
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+<div class="topic__infos">
+    <div class="container">
+        <a href="{{ profile.website }}">{{ profile.website }}</a>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+
+{% block main %}
+
+<div class="caption text-center">
+    <h3>{{ profile.name }}</h3>
+    <p>{{ profile.description }}</p>
+    <p></p>
+    <p>{{ profile.address }}</p>
+    <a href="{{ profile.website }}">{{ profile.website }}</a>
+</div>
+
+
+{% endblock %}

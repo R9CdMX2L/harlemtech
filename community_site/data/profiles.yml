@@ -1,0 +1,178 @@
+- "Harlem BioSpace":
+    description: ""
+    category: coworking
+    tag1: "Space"
+    tag2: "Mentorship"
+    tag3: "Events & Classes"
+    address: "423 W 127th St, New York, NY 10027"
+    zip: "10027"
+    website: "http://harlembiospace.com/"
+    email: ""
+    lat: 40.812959
+    lon: -73.953669
+    logo_image: samples/logo/harlem_biospace-logo.png
+
+- "Creative Workspace":
+    description: ""
+    category: coworking
+    tag1: "Spaces"
+    tag2: "Membership"
+    tag3: "Conf.Rooms"
+    address: "275 Malcolm X Blvd # 2, New York, NY 10027"
+    zip: "10027"
+    website: "http://www.creativeworkspacehba.com/"
+    email: ""
+    lat: 40.806929 
+    lon: -73.946182
+    logo_image: samples/logo/creativeworkspacehba.com-logo-small.png
+
+- "TEEM":
+    description: ""
+    category: coworking
+    tag1: "Networking"
+    tag2: "Creative"
+    tag3: "individuals"
+    address: "1463 5th Avenue, New York, NY"
+    zip: "10035"
+    website: "http://www.teemcw.com/"
+    email: ""
+    lat: 40.802152
+    lon: -73.945465
+    logo_image: samples/logo/teemcw.png
+
+- "AnySizeDeals.com":
+    description: "AnySizeDeals focuses on ensuring that the investors and businesses that use our platform have both an online and mobile presence."
+    category: Tech Companies
+    tag1: "Investor"
+    tag2: "Businesses"
+    tag3: "online platform"
+    address: "34 W 139th Street, NY, NY"
+    zip: "10037"
+    website: "https://anysizedeals.com/"
+    email: ""
+    lat: 40.815779
+    lon: -73.936881
+    logo_image: samples/logo/anysizedeals-logo.png
+
+- "Smart Money":
+    description: "Our team includes managers, programmers, trainers and advisors from America, the UK, Bulgaria, Uganda, Kenya and Tanzania. The team works closely together and bridges geographical divides using modern technologies like email, Skype and, yes, mobile phones."
+    category: Tech Companies
+    tag1: "finance"
+    tag2: "reduce poverty"
+    tag3: "improve"
+    address: "193 Lenox Avenue, New York, NY"
+    zip: "10026"
+    website: "http://smartmoneyinternational.com/"
+    email: ""
+    lat: 40.804431
+    lon: -73.947981
+    logo_image: samples/logo/smartmoney.png
+
+- "Silicon Harlem":
+    description: "To galvanize upper Manhattan companies and residents to embrace our model to Transform Harlem into a Technology and innovation Hub that thrives in the digital economy."
+    category: Tech Companies
+    tag1: "Meetups"
+    tag2: "Collaboration"
+    tag3: "Education"
+    address: "46 W. 116th St., NY, NY"
+    zip: "10026"
+    website: "http://event.siliconharlem.net/"
+    email: ""
+    lat: 40.801341
+    lon: -73.947979
+    logo_image: samples/logo/event.siliconharlem.net.jpg
+
+- "Zahn Center":
+    description: "We are at the heart of innovation and entrepreneurship at The City College of New York. The Zahn Innovation Center will spark your inner entrepreneur."
+    category: Incubators/Accelerators
+    tag1: "Innovation"
+    tag2: "Develop"
+    address: "160 Convent Ave, New York, NY"
+    zip: "10031"
+    website: "http://zahncenternyc.com"
+    email: ""
+    lat: 40.818674 
+    lon: -73.950702
+    logo_image: samples/logo/zahncenternyc.com.png
+
+- "Harlem BioSpace":
+    description: "A new biotech incubator concept, right in Manhattan"
+    category: Incubators/Accelerators
+    tag1: "Biotech"
+    tag2: "Incubator"
+    tag3: "Mentorship"
+    address: "423 W 127th St, New York, NY 10027"
+    zip: "10027"
+    website: "http://harlembiospace.com"
+    email: ""
+    lat: 40.812959
+    lon: -73.953669
+    logo_image: samples/logo/harlem_biospace-logo.png
+
+- "CoFound":
+    description: "cofound/harlem is the first accelerator out of NYC’s latest tech hub - Harlem. We’re turning the traditional accelerator model on it’s head and offering accepted startups an unprecedented opportunity at growing to the next level."
+    category: Incubators/Accelerators
+    tag1: "Spaces"
+    tag2: "Mentorship"
+    tag3: "Logistics"
+    address: "1463 5th Avenue, New York, NY"
+    zip: "10035"
+    website: "http://cofound.co"
+    email: ""
+    lat: 40.802152
+    lon: -73.945465
+    logo_image: samples/logo/cofound.co.jpg
+
+- "Harlem Business alliance":
+    description: "The Harlem Business Alliance was founded in 1980 by a group of prominent Harlem business leaders who recognized the void that had resulted from years of disinvestment and abandonment in Harlem and the critical need to mobilize the existing businesses and organizations to come together as a collective voice."
+    category: Community Organizations supporting Tech
+    tag1: "Business Plan"
+    tag2: "Innovation"
+    tag3: "Certification"
+    address: "275 Malcolm X Blvd # 2, New York, NY 10027"
+    zip: "10027"
+    website: "http://hbany.org"
+    email: ""
+    lat: 40.806929
+    lon: -73.946182
+    logo_image: samples/logo/harlem_business_alliance.png
+
+- "Mike Street":
+    description: "Social Media Expert"
+    category: Freelance Talent
+    tag1: "Freelance"
+    tag2: "Media"
+    address: ""
+    zip: ""
+    website: ""
+    email: ""
+    lat: 40.802152
+    lon: -73.945465
+    logo_image: samples/logo/event.siliconharlem.net.jpg
+
+- "digital.nyc":
+    description: ""
+    category: Events and Hackathons
+    tag1: "Event"
+    tag2: "Hackathon"
+    tag3: "Digitally"
+    address: "46 W. 116th St., NY, NY"
+    zip: "10026"
+    website: ""
+    email: ""
+    lat: 40.801341
+    lon: -73.947979
+    logo_image: samples/logo/digital.nyc.jpg
+
+- "CoFound":
+    description: ""
+    category: Events and Hackathons
+    tag1: "Found"
+    tag2: "Event"
+    tag3: "Hacking"
+    address: "1463 5th Avenue, New York, NY"
+    zip: "10035"
+    website: ""
+    email: ""
+    lat: 40.802152
+    lon: -73.945465

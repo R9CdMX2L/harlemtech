@@ -1,0 +1,192 @@
+---
+title: Profiles
+---
+
+<!-- Include Leaflet CSS file in the head section of your document -->
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+<!-- Include Leaflet JavaScript file -->
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+<!-- Include Overlapping Marker Helper JavaScript file -->
+{{ 'oms.min' | javascript_tag }}
+
+<style type="text/css">
+#map { height: 500px; }
+
+#profile-div2 {
+    overflow: scroll;
+    height: 500px;
+}
+</style>
+
+
+{% extends parent %}
+
+
+{% block 'nav' %}
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="nav-link" href="/">Home</a></li>
+                            <li><a class="nav-link current" href="/profiles">Profiles</a></li>
+                            <li><a class="nav-link" href="/test">Test</a></li>
+                        </ul>
+                    </div>
+{% endblock %}
+
+
+{% block 'header' %}
+<div class="topic">
+<div class="container">
+    <div class="col-md-8">
+        <h3>Profiles</h3>
+        <h4>The complete guide to Tech Profiles in Harlem!</h4>
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+<div class="topic__infos">
+    <div class="container">
+        Search and navigate Profile Information
+    </div>
+</div>
+</div>
+{% endblock %}
+
+
+{% block 'main' %}
+
+
+<hr class="dashed" />
+
+
+<div id="map-container" class="container-fluid" >
+    <div class="row">
+
+        <div class="col-md-6">
+            <table id="profile-table" class="display">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+{% with_scope order_by: "name" %}
+{% for profile in contents.profiles %}
+                    <tr data-slug="{{ profile._slug }}">
+                        <td>
+                            {% if profile.logo_image.url %}
+                            <img src="{{ profile.logo_image.url | resize: '22x22#' }}" alt="{{ profile.name | escape }}">
+                            {% endif %}
+                            {{ profile.name }}
+                        </td>
+                        <td>
+                            {{ profile.category.title }}
+        <br>
+        <div class="blank"></div>
+        <span class="badge badge-default">{{ profile.tag1 }}</span>&nbsp;
+        <div class="blank"></div>
+        <span class="badge badge-default">{{ profile.tag2 }}</span>&nbsp;
+        <div class="blank"></div>
+        <span class="badge badge-default">{{ profile.tag3 }}</span>&nbsp;
+
+                        </td>
+                    </tr>
+{% endfor %}
+{% endwith_scope %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-6">
+
+            <div id="map"></div>
+
+            <div id="profile-map"></div>
+
+            <script>
+
+            var selectedView = 'map-container';
+
+            $.extend({
+                showPopupForSlug: function(slug) {
+                    var marker = markers[slug];
+
+                    var popup = new L.Popup();
+                    popup.setContent(marker.desc);
+                    popup.setLatLng(marker.getLatLng());
+                    map.openPopup(popup);
+
+                    map.setView(marker.getLatLng());
+                }
+            });
+
+            $(document).ready( function () {
+
+                $('#profile-table').DataTable();
+
+                $('#profile-table tbody').on( 'click', 'tr', function () {
+
+                    var slug = $(this).data('slug');
+
+                    $.showPopupForSlug(slug);
+
+                    if ( $(this).hasClass('selected') ) {
+                        $(this).removeClass('selected');
+                    }
+                    else {
+                        table.$('tr.selected').removeClass('selected');
+                        $(this).addClass('selected');
+                    }
+                } );
+
+            });
+
+            var map = L.map('map').setView([40.801341, -73.947979], 13);
+
+            var data = [];
+            window.mapData = data;
+
+            var markers = {};
+
+            L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+	            maxZoom: 18,
+	            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+		            '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+		            'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+	            id: 'examples.map-i875mjb7'
+            }).addTo(map);
+
+            // Create an OverlappingMarkerSpiderfier instance
+            var oms = new OverlappingMarkerSpiderfier(map);
+
+            {% for profile in contents.profiles %}
+
+                // add marker
+                var marker = new L.Marker([{{ profile.lat }}, {{ profile.lon }}]);
+                marker.desc = "<b>{{ profile.name }}</b><br/>{{ profile.description }}{{ profile.address }}<br/><a href='/profiles/{{ profile._slug }}'>Read More</a>";
+                map.addLayer(marker);
+                oms.addMarker(marker);
+
+                // Instead of adding click listeners to your markers directly via marker.addEventListener or marker.on,
+                // add a global listener on the OverlappingMarkerSpiderfier instance instead. The listener will be
+                // passed the clicked marker as its first argument.
+                var popup = new L.Popup();
+                oms.addListener('click', function(marker) {
+                    popup.setContent(marker.desc);
+                    popup.setLatLng(marker.getLatLng());
+                    map.openPopup(popup);
+                });
+
+                // add marker to collection
+                markers['{{ profile._slug }}'] = marker;
+
+            {% endfor %}
+
+            </script>
+        </div>
+    </div>
+</div>
+{% endblock %}
