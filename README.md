@@ -3,8 +3,8 @@ This guide is just an overview for installing Ruby and creating Locomotive CMS e
 
 ####Repository contents####
 
-**cms** - This got created in "Install Engine locally" section.
-**community_site** - Created in "Create your first site" section.
+ - **cms** - This got created in "Install Engine locally" section
+ - **community_site** - Created in "Create your first site" section
 
 If you just want to test ride and deploy the created site (community_site folder), create a free hosting account for http://www.locomotivehosting.com/ and follow deployment instructions provided in "Deploy to an engine" section in this document).
 
@@ -152,6 +152,25 @@ Open http://localhost:3333/ in your web browser
 
 ##Deploy to an engine##
 
+Before deploying to an engine, make sure you have configured a 'target' in community_site/config/deploy.yml. You can have multiple targets coexisting in this file.
+
+In this example, our deployment 'target' is called **hosting** (used as key in yaml file). This sample is valid for using locomotivecms.com hosting.
+
+     hosting:
+       host: khaki-golden-54.locomotivehosting.com
+       api_key: key_here
+       ssl: true
+
+What you want to do is to set values for host and api_key.
+
+In this example, our deployment 'target' is called **inhouse** (used as key in yaml file). This sample is valid for using in an own server (or localhost).
+
+     inhouse:
+       host: ourserver:8080
+       email: youremail@example.com
+       password: password_here
+       api_key: key_here
+
 **Pushing the whole site**
 
     $ bundle exec wagon push hosting
@@ -181,4 +200,5 @@ For more info on this: http://nokogiri.org/tutorials/installing_nokogiri.html
 
 ##Credits##
 This document was edited using https://stackedit.io/editor
+
 
