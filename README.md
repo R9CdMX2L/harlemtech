@@ -1,8 +1,16 @@
 # Deployment Guide #
-This guide is just an overview for deployment of cms and site. Detailed steps are provided on Locomotive CMS website: http://doc.locomotivecms.com/get-started/what-is-locomotivecms
+This guide is just an overview for installing Ruby and creating Locomotive CMS engines and sites. Detailed steps are provided on Locomotive CMS website: http://doc.locomotivecms.com/get-started/what-is-locomotivecms
 
-Please note that in provided code snippets, the symbol $ is used for command prompt and it's not necessary to enter this during a console session.
+####Repository contents####
 
+**cms** - This got created in "Install Engine locally" section.
+**community_site** - Created in "Create your first site" section.
+
+If you just want to test ride and deploy the created site (community_site folder), create a free hosting account for http://www.locomotivehosting.com/ and follow deployment instructions provided in "Deploy to an engine" section in this document).
+
+Otherwise, if you plan to deploy on a different hosting option, you can either create an engine in localhost and deploy/run in there.
+
+**NOTE:** that in provided code snippets, the symbol $ is used for command prompt and it's not necessary to enter this during a console session.
 
 ## Install Wagon ##
 
