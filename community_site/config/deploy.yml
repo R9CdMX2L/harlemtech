@@ -1,12 +1,12 @@
-development:
-  host: localhost:8080
-  email: jesusorozco@yahoo.com
-  password: admin123
-  api_key: 36bce1739dbe6a051da60ff97b062c8b33e8c606
-hosting:
-  host: khaki-golden-54.locomotivehosting.com
-  api_key: bbb3f11f3bcd7eb10cbab84d41f1fd8d823de0de
-  ssl: true
+# development:
+#   host: localhost:8080
+#   email: youremail@example.com
+#   password: password_here
+#   api_key: key_here
+# hosting:
+#   host: khaki-golden-54.locomotivehosting.com
+#   api_key: key_here
+#   ssl: true
 # staging:
 #   host: staging.example.com
 #   email: john@doe.net
