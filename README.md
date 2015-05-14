@@ -11,9 +11,11 @@ Extracted from: http://doc.locomotivecms.com/get-started/install-wagon
 Wagon is a command line tool for creating LocomotiveCMS sites.
 
 **Step 1: Install ImageMagick**
-   $ sudo apt-get install imagemagick
+
+    $ sudo apt-get install imagemagick
 
 **Step 2: Install Ruby**
+
 I installed Ruby Programming Language using rvm. There are other methods as well and will vary depending on your OS and/or preferences.
 
     $ curl -L https://get.rvm.io | bash -s stable
@@ -34,7 +36,7 @@ Verify that Ruby version was installed.
 
     $ ruby -v
 
-**Step 3: Install Bundler and Rake **
+**Step 3: Install Bundler and Rake**
 
     $ gem install bundler
     $ gem install rake
